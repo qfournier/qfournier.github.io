@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Portfolio of Quentin Fournier</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+      <script>
+         $(document).ready(function() {
+         
+           $(".showMore").on("click", function() {
+         
+             var $this = $(this);
+         
+             var content = $this.prev()
+             var linkText = $this.text().toUpperCase();
+         
+             if (linkText === "SHOW MORE") {
+               linkText = "Show less";
+               content.addClass("showContent", 400).removeClass("hideContent", 400);
+             } else {
+               content.addClass("hideContent", 400).removeClass("showContent", 400);
+               linkText = "Show more";
+             }
+         
+             $this.text(linkText);
+           });
+         
+         });
+           
+      </script>
+   </head>
+   <body>
+      <div class="wrapper">
+         <header>
+            <h1>
+               <a href="https://qfournier.github.io/">
+                  <p align="center"> Quentin Fournier </p>
+               </a>
+            </h1>
+            <img src="images/logo.png?raw=true" class="profile" alt="Logo" />
+            <p>
+            <p align="center"> <a href="mailto:quentin.fournier@mila.quebec">Email</a> | <a href="https://www.linkedin.com/in/qfournier">LinkedIn</a> | <a href="https://github.com/qfournier">GitHub</a> </p>
+            <p align="justify"> I am a Postdoctoral Research Fellow at Mila - Quebec Artificial Intelligence Institute and at the University of Montreal, working with Prof. Sarath Chandar.<br /><br />My research interest revolves around large-scale Transformers for NLP and their potential societal impact. My current research investigates the continual pretraining of large-scale language models. Additionally, I am passionate about teaching and have taught the graduate Data Mining course at Polytechnique Montréal.<br /><br />I received my Ph.D. from Polytechnique Montréal, working with Daniel Aloise and Michel R. Dagenais on the use of Transformers to detect anomalies in Linux kernel traces.            </p>
+         </header>
+         <section>
+            <h1>Academic Experiences</h1>
+            <hr />
+            <h3>INF8111 - Data Mining (Lecturer)</h3>
+            <h4><em>Polytechnique Montréal</em></h4>
+            <p><a href="https://www.polymtl.ca/programmes/cours/fouille-de-donnees"><img src="https://img.shields.io/badge/PolyMtl-INF8111-blue.svg" alt="INF8111" /></a></p>
+            <div style="text-align: justify">This graduate-level course is a comprehensive introduction to data mining that covers data munging, machine learning algorithms, mining of graphs and streams, and big data.</div>
+            <p><br /><br /></p>
+            <h1>Publications and Research Projects</h1>
+            <hr />
+            <h3>A Practical Survey on Faster and Lighter Transformers</h3>
+            <h4><em>Quentin Fournier, Gaétan Marceau Caron, and Daniel Aloise</em></h4>
+            <p><a href="https://arxiv.org/abs/2103.14636"><img src="https://img.shields.io/badge/arXiv-View_on_arXiv-B31B1B.svg" alt="arXiv" /></a></p>
+            <div class="hideContent">
+               <div class="post-text">Recurrent neural networks are effective models to process sequences. However, they are unable to learn long-term dependencies because of their inherent sequential nature. As a solution, Vaswani et al. introduced the Transformer, a model solely based on the attention mechanism that is able to relate any two positions of the input sequence, hence modelling arbitrary long dependencies. The Transformer has improved the state-of-the-art across numerous sequence modelling tasks. However, its effectiveness comes at the expense of a quadratic computational and memory complexity with respect to the sequence length, hindering its adoption. Fortunately, the deep learning community has always been interested in improving the models' efficiency, leading to a plethora of solutions such as parameter sharing, pruning, mixed-precision, and knowledge distillation. Recently, researchers have directly addressed the Transformer's limitation by designing lower-complexity alternatives such as the Longformer, Reformer, Linformer, and Performer. However, due to the wide range of solutions, it has become challenging for the deep learning community to determine which methods to apply in practice to meet the desired trade-off between capacity, computation, and memory. This survey addresses this issue by investigating popular approaches to make the Transformer faster and lighter and by providing a comprehensive explanation of the methods' strengths, limitations, and underlying assumptions.</div>
+            </div>
+            <div class="showMore"><a>Show more</a></div>
+            <hr />
+            <h3>On Improving Deep Learning Trace Analysis With System Call Arguments</h3>
+            <h4><em>Quentin Fournier, Daniel Aloise, Seyed Vahid Azhari, and François Tetreault</em></h4>
+            <p><a href="https://github.com/qfournier/syscall_args/"><img src="https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub" alt="View on GitHub" /></a>
+               <a href="https://arxiv.org/abs/2103.06915"><img src="https://img.shields.io/badge/arXiv-View_on_arXiv-B31B1B.svg" alt="arXiv" /></a>
+            </p>
+            <div class="hideContent">
+               <div class="post-text">Kernel traces are sequences of low-level events comprising a name and multiple arguments including a timestamp, a process id, and a return value, depending on the event. Their analysis helps uncover intrusions, identify bugs, and find latency causes. However, their effectiveness is hindered by omitting the event arguments. To remedy this limitation, we introduce a general approach to learn a representation of the event names along with their arguments using both embedding and encoding. The proposed method is readily applicable to most neural networks and is task-agnostic. The benefit is quantified by conducting an ablation study on three groups of arguments: call-related, process-related, and time-related. Experiments were conducted on a novel web request dataset and validated on a second dataset collected on pre-production servers by Ciena, our partnering company. By leveraging additional information, we were able to increase the performance of two widely-used neural networks, an LSTM and a Transformer, by up to 11.3% on two unsupervised language modelling tasks. Such tasks may be used to detect anomalies, pre-train neural networks to improve their performance, and extract a contextual representation of the events.</div>
+            </div>
+            <div class="showMore"><a>Show more</a></div>
+            <hr />
+            <h3>Depgraph: Localizing Performance Bottlenecks in Multi-Core Applications Using Waiting Dependency Graphs and Software Tracing</h3>
+            <h4><em>Naser Ezzati-Jivan, Quentin Fournier, Michel R. Dagenais, and Abdelwahab Hamou-Lhadj</em></h4>
+            <p><a href="https://arxiv.org/abs/2103.04933"><img src="https://img.shields.io/badge/arXiv-View_on_arXiv-B31B1B.svg" alt="arXiv" /></a></p>
+            <div class="hideContent">
+               <div class="post-text">This paper addresses the challenge of understanding the waiting dependencies between the threads and hardware resources required to complete a task. The objective is to improve software performance by detecting the underlying bottlenecks caused by system-level blocking dependencies. In this paper, we use a system level tracing approach to extract a Waiting Dependency Graph that shows the breakdown of a task exe- cution among all the interleaving threads and resources. The method allows developers and system administrators to quickly discover how the total execution time is divided among its interacting threads and resources. Ultimately, the method helps detecting bottlenecks and highlighting their possible causes. Our experiments show the effectiveness of the proposed approach in several industry-level use cases. Three performance anomalies are analysed and explained using the proposed approach. Evaluating the method efficiency reveals that the imposed overhead never exceeds 10.1%, therefore making it suitable for in-production environments.</div>
+            </div>
+            <div class="showMore"><a>Show more</a></div>
+            <hr />
+            <h3>Automatic Cause Detection of Performance Problems in Web Applications</h3>
+            <h4><em>Quentin Fournier, Naser Ezzati-jivan, Daniel Aloise, and Michel R. Dagenais</em></h4>
+            <p><a href="https://github.com/qfournier/request_analysis/"><img src="https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub" alt="View on GitHub" /></a>
+               <a href="https://github.com/qfournier/request_analysis/blob/master/notebook.ipynb"><img src="https://img.shields.io/badge/Jupyter-Open_Notebook-blue?logo=Jupyter" alt="Open Notebook" /></a>
+               <a href="https://arxiv.org/abs/2103.04954"><img src="https://img.shields.io/badge/arXiv-View_on_arXiv-B31B1B.svg" alt="arXiv" /></a>
+            </p>
+            <div class="hideContent">
+               <div class="post-text">The execution of similar units can be compared by their internal behaviors to determine the causes of their potential performance issues. For instance, by examining the internal behaviors of different fast or slow web requests more closely and by clustering and comparing their internal executions, one can determine what causes some requests to run slowly or behave in unexpected ways. In this paper, we propose a method of extracting the internal behavior of web requests as well as introduce a pipeline that detects performance issues in web requests and provides insights into their root causes. First, low-level and fine-grained information regarding each request is gathered by tracing both the user space and the kernel space. Second, further information is extracted and fed into an outlier detector. Finally, these outliers are then clustered by their behavior, and each group is analyzed separately. Experiments revealed that this pipeline is indeed able to detect slow web requests and provide additional insights into their true root causes. Notably, we were able to identify a real PHP cache contention using the proposed approach.</div>
+            </div>
+            <div class="showMore"><a>Show more</a></div>
+            <hr />
+            <h3>Empirical Comparison Between Autoencoders and Traditional Dimensionality Reduction Methods</h3>
+            <h4><em>Quentin Fournier and Daniel Aloise</em></h4>
+            <p><a href="https://github.com/qfournier/dimensionality_reduction/"><img src="https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub" alt="View on GitHub" /></a>
+               <a href="https://arxiv.org/abs/2103.04874"><img src="https://img.shields.io/badge/arXiv-View_on_arXiv-B31B1B.svg" alt="arXiv" /></a>
+            </p>
+            <div class="hideContent">
+               <div class="post-text">In order to process efficiently ever-higher dimensional data such as images, sentences, or audio recordings, one needs to find a proper way to reduce the dimensionality of such data. In this regard, SVD-based methods including PCA and Isomap have been extensively used. Recently, a neural network alternative called autoencoder has been proposed and is often preferred for its higher flexibility. This work aims to show that PCA is still a relevant technique for dimensionality reduction in the context of classification. To this purpose, we evaluated the performance of PCA compared to Isomap, a deep autoencoder, and a variational autoencoder. Experiments were conducted on three commonly used image datasets: MNIST, Fashion-MNIST, and CIFAR-10. The four different dimensionality reduction techniques were separately employed on each dataset to project data into a low-dimensional space. Then a k-NN classifier was trained on each projection with a cross-validated random search over the number of neighbours. Interestingly, our experiments revealed that k-NN achieved comparable accuracy on PCA and both autoencoders projections provided a big enough dimension. However, PCA computation time was two orders of magnitude faster than its neural network counterparts.</div>
+            </div>
+            <div class="showMore"><a>Show more</a></div>
+            <hr />
+            <h3>Variational Autoencoder as a Justification for Naive Bayes, Linear and Quadratic Discriminant Analysis</h3>
+            <h4><em>Quentin Fournier and Charafeddine Talal</em></h4>
+            <p><a href="https://github.com/qfournier/vae_justification/"><img src="https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub" alt="View on GitHub" /></a> 
+               <a href="https://github.com/qfournier/vae_justification/blob/master/project.ipynb"><img src="https://img.shields.io/badge/Jupyter-Open_Notebook-blue?logo=Jupyter" alt="Open Notebook" /></a>
+               <a href="./pdfs/vae.pdf"><img src="https://img.shields.io/badge/PDF-Download-blue.svg" alt="PDF" /></a>
+            </p>
+            <div class="hideContent">
+               <div class="post-text">
+                  Classical machine learning methods such as naive Bayes, linear discriminant analysis (LDA) and quadratic discriminant analysis (QDA) have been applied with success to many different problems. However, all the above methods make assumptions on the data distribution. Although those methods tend to work well even when their assumptions are not met, one could look for a way to systematically justify their use. As part of our project, we propose to learn a projection of the data that will verify all the assumptions made by naive Bayes, LDA and QDA. In order to do so, we used an unsupervised probabilistic neural network called a variational autoencoder. Such a model can learn a projection which tends to follow a normal distribution N(0,I). This allows us to evaluate the impact of violating - or respecting - the assumptions made by the three classifiers. When applied on a real data set of credit card fraud detection, we observed a significant improvement for QDA and naive Bayes. More specifically, for a small trade-off in precision, the recall rate of both methods increase 7 fold. However, LDA performs only slightly better on the learn projection than on the original space.<br /><br />This project has been conducted as part of an assignment for MTH6312: Méthodes statistiques d'apprentissage at Polytechnique Montréal (Winter, 2018).
+               </div>
+            </div>
+            <div class="showMore"><a>Show more</a></div>
+            <hr />
+            <h3>Neural Networks as an Alternative to I-Vectors for Speaker Verification</h3>
+            <h4><em>Quentin Fournier and Christian Raymond</em></h4>
+            <p><a href="./pdfs/ivector.pdf"><img src="https://img.shields.io/badge/PDF-Download-blue.svg" alt="PDF" /></a></p>
+            <div style="text-align: justify">This project has been conducted as part of a research internship at IRISA (Summer, 2017).
+               <br /><br />
+               As part of an internship at the IRISA, I investigated the use of neural networks for speaker verification. In particular, I studied data projections through deep encoders as an alternative to i-vector embedding.
+            </div>
+            <hr />
+         </section>
+      </div>
+   </body>
+</html>
