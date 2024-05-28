@@ -42,25 +42,58 @@
             <img src="images/logo.png?raw=true" class="profile" alt="Logo" />
             <p>
             <p align="center"> <a href="mailto:quentin.fournier@mila.quebec">Email</a> | <a href="https://www.linkedin.com/in/qfournier">LinkedIn</a> | <a href="https://github.com/qfournier">GitHub</a> </p>
-            <p align="justify"> I am a Postdoctoral Research Fellow at Mila - Quebec Artificial Intelligence Institute and at the University of Montreal, working with Prof. Sarath Chandar.<br /><br />My current research investigates the continual pretraining of large-scale Transformer language models. Additionally, I am passionate about teaching and have taught the graduate Data Mining course at Polytechnique Montréal.<br /><br />I received my Ph.D. from Polytechnique Montréal, working with Daniel Aloise and Michel R. Dagenais on the use of Transformers to detect anomalies in Linux kernel traces.            </p>
+            <p align="justify"> I am a Research Fellow at Mila - Quebec Artificial Intelligence Institute.<br /><br />My current research investigates Transformer language models for drug discovery. Additionally, I am passionate about teaching and have taught the graduate Data Mining course at Polytechnique Montréal.<br /><br />I received my Ph.D. from Polytechnique Montréal, working with Daniel Aloise and Michel R. Dagenais on the use of Transformers to detect anomalies in Linux kernel traces.</p>
          </header>
          <section>
-            <h1>Academic Experiences</h1>
+            <h1>Positions</h1>
             <hr />
-            <h3>INF8111 - Data Mining</h3>
-            <h4><em>Polytechnique Montréal</em></h4>
+            <h3>Reasearch Fellow at Mila</h3>
+            <h4><em>Lead a thematic lab on ML for drug discovery</em></h4>
+            
+            <h3>Consultant as Senior Machine Learning Scientist at Amgen</h3>
+            <h4><em>Design novel ML solutions for drug discovery</em></h4>
+            
+            <h3>Postdoctoral Fellow at Mila, University of Montréal</h3>
+            <h4><em>Advised by Sarath Chandar and Irina Rish</em></h4>
+            <h4><em>Computer Science and Operations Research Department</em></h4>
+            
+            <h3>Lecturer at Polytechnique Montréal</h3>
+            <h4><em>INF8111 – Data Mining (Fall 2019, Summer 2020, Fall 2020, Fall 2022) (graduate-level)</em></h4>
             <p><a href="https://www.polymtl.ca/programmes/cours/fouille-de-donnees"><img src="https://img.shields.io/badge/PolyMtl-INF8111-blue.svg" alt="INF8111" /></a></p>
             <div style="text-align: justify">This graduate-level course is a comprehensive introduction to data mining that covers data munging, machine learning algorithms, mining of graphs and streams, and big data.</div>
-            <li>Lecturer: Fall 2019, Summer 2020, Fall 2020, Fall 2022</li>
-            <li>Teacher Assistant: Summer 2021, Fall 2021</li>
-            <hr />
-            <h3>INF8215 - Artificial Intelligence: Methods and Algorithms</h3>
-            <h4><em>Polytechnique Montréal</em></h4>
+
+
+            <h3>Teacher Assistant – Polytechnique Montréal</h3>
+            <h4><em>INF8111 – Data Mining (Summer 2021, Fall 2021) (graduate-level)</em></h4>
+            <p><a href="https://www.polymtl.ca/programmes/cours/fouille-de-donnees"><img src="https://img.shields.io/badge/PolyMtl-INF8111-blue.svg" alt="INF8111" /></a></p> 
+            <div style="text-align: justify">This graduate-level course is a comprehensive introduction to data mining that covers data munging, machine learning algorithms, mining of graphs and streams, and big data.</div>
+
+            <h4><em>INF8215 – Artificial Intelligence: Methods and Algorithms (Fall 2018) (graduate-level)</em></h4>
             <p><a href="https://www.polymtl.ca/programmes/cours/intelligence-artif-methodes-et-algorithmes"><img src="https://img.shields.io/badge/PolyMtl-INF8215-blue.svg" alt="INF8215" /></a></p>
             <div style="text-align: justify">This graduate-level course is a comprehensive introduction to artificial intelligence that covers local search, A*, constraint satisfaction problems, supervised and unsupervised learning, as well as reinforcement learning.</div>
-            <li>Teacher Assistant: Fall 2018</li>
-            <p><br /><br /></p>
+
+            <h3>Research and Development Internship at IT Link</h3>
+            <h4><em>Supervised by Nicolas Ménard and Christian Raymond</em></h4>
+            
+            <h3>Research Internship at Institut de Recherche en Informatique et Système Aléatoire (IRISA)</h3>
+            <h4><em>Supervised by Christian Raymond</em></h4>
+
             <h1>Publications and Research Projects</h1>
+        <hr />
+            <h3>Predicting the Impact of Model Expansion through the Minima Manifold: A Loss Landscape Perspective</h3>
+            <h4><em>Pranshu Malviya, Jerry Huang, Quentin Fournier, and Sarath Chandar</em></h4>
+            <p><a href="https://arxiv.org/abs/2405.15895"><img src="https://img.shields.io/badge/arXiv-View_on_arXiv-B31B1B.svg" alt="arXiv" /></a></p>
+            <div class="hideContent">
+               <div class="post-text">The optimal model for a given task is often challenging to determine, requiring training multiple models from scratch which becomes prohibitive as dataset and model sizes grow. A more efficient alternative is to reuse smaller pre-trained models by expanding them, however, this is not widely adopted as how this impacts training dynamics remains poorly understood. While prior works have introduced statistics to measure these effects, they remain flawed. To rectify this, we offer a new approach for understanding and quantifying the impact of expansion through the lens of the loss landscape, which has been shown to contain a manifold of linearly connected minima. Building on this new perspective, we propose a metric to study the impact of expansion by estimating the size of the manifold. Experimental results show a clear relationship between gains in performance and manifold size, enabling the comparison of candidate models and presenting a first step towards expanding models more reliably based on geometric properties of the loss landscape.</div>
+            </div>
+            <div class="showMore"><a>Show more</a></div>
+        <hr />
+            <h3>A Deep Dive into the Trade-Offs of Parameter-Efficient Preference Alignment Techniques</h3>
+            <h4><em>Megh Thakkar, Quentin Fournier, Matthew Riemer, Pin-Yu Chen, Amal Zouaq, Payel Das, and Sarath Chandar</em></h4>
+            <div class="hideContent">
+               <div class="post-text">Large language models are first pre-trained on trillions of tokens and then instruction-tuned or aligned to specific preferences. While pre-training remains out of reach for most researchers due to the compute required, fine-tuning has become affordable thanks to parameter-efficient methods such as LoRA and QLoRA. Alignment is known to be sensitive to the many factors involved, including the quantity and quality of data, the alignment method, and the adapter rank. However, there has not yet been an extensive study of their effect on downstream performance. To address this gap, we conduct an in-depth investigation of the impact of popular choices for three crucial axes: (i) the alignment dataset (HH-RLHF and BeaverTails), (ii) the alignment technique (SFT and DPO), and (iii) the model (LLaMA-1, Vicuna-v1.3, Mistral-7b, and Mistral-7b-Instruct). Our extensive setup spanning over 300 experiments reveals consistent trends and unexpected findings. We observe how more informative data helps with preference alignment, cases where supervised fine-tuning outperforms preference optimization, and how aligning to a distinct preference boosts performance on downstream tasks. Through our in-depth analyses, we put forward key guidelines to help researchers perform more effective parameter-efficient LLM alignment.</div>
+            </div>
+            <div class="showMore"><a>Show more</a></div>
             <hr />
             <h3>A Practical Survey on Faster and Lighter Transformers</h3>
             <h4><em>Quentin Fournier, Gaétan Marceau Caron, and Daniel Aloise</em></h4>
